@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Logo -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:contentDescription="Logo" />
+
+    <!-- Brief Description -->
+    <TextView
+        android:id="@+id/companyDescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Empowering the Nation was established in 2018, offering courses for domestic workers and gardeners."
+        app:layout_constraintTop_toBottomOf="@id/logoImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp"
+        android:textAlignment="center" />
+
+    <!-- Navigation Buttons -->
+    <Button
+        android:id="@+id/sixMonthCoursesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Six-Month Courses"
+        app:layout_constraintTop_toBottomOf="@id/companyDescriptionTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="goToSixMonthCourses"/>
+
+    <Button
+        android:id="@+id/sixWeekCoursesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Six-Week Courses"
+        app:layout_constraintTop_toBottomOf="@id/sixMonthCoursesButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="goToSixWeekCourses"/>
+
+    <Button
+        android:id="@+id/buttonFees"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:onClick="goToCalculateFeesActivity"
+        android:text="Fees"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sixMonthCoursesButton"
+        app:layout_constraintVertical_bias="0.0"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,103 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculateFeesActivity">
+
+    <!-- Course Selection -->
+    <CheckBox
+        android:id="@+id/firstAidCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Aid - R1500"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp" />
+
+    <CheckBox
+        android:id="@+id/sewingCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sewing - R1500"
+        app:layout_constraintTop_toBottomOf="@id/firstAidCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp" />
+
+    <CheckBox
+        android:id="@+id/landscapingCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Landscaping - R1500"
+        app:layout_constraintTop_toBottomOf="@id/sewingCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp" />
+
+    <CheckBox
+        android:id="@+id/lifeSkillsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Life Skills - R1500"
+        app:layout_constraintTop_toBottomOf="@id/landscapingCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp" />
+
+    <CheckBox
+        android:id="@+id/childMindingCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Child Minding - R750"
+        app:layout_constraintTop_toBottomOf="@id/lifeSkillsCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp" />
+
+    <CheckBox
+        android:id="@+id/cookingCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cooking - R750"
+        app:layout_constraintTop_toBottomOf="@id/childMindingCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp" />
+
+    <CheckBox
+        android:id="@+id/gardenMaintenanceCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Garden Maintenance - R750"
+        app:layout_constraintTop_toBottomOf="@id/cookingCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp" />
+
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate Fees"
+        app:layout_constraintTop_toBottomOf="@id/gardenMaintenanceCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="calculateFees"/>
+
+    <!-- Total Fee Display -->
+    <TextView
+        android:id="@+id/totalFeeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Fee: "
+        app:layout_constraintTop_toBottomOf="@id/calculateButton"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="16dp"/>
+
+    <!-- Back to Home Button -->
+    <Button
+        android:id="@+id/backToHomeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back to Home"
+        app:layout_constraintTop_toBottomOf="@id/totalFeeTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
